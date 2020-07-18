@@ -1,0 +1,27 @@
+.container{
+    padding-top:50px;
+}
+
+.tab-pane{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top:50px;
+
+}
+table{
+    width: 100%;
+}
+td , th {
+    text-align: center;
+    padding: 1em;
+}
+
+
+#eventTableImg{
+    height: 50px;
+    width: 50px;
+}
+.CarouselTableImages{
+    height: 50px;
+    width: 50px;
+}
