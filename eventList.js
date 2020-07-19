@@ -1,6 +1,6 @@
 displayEvents()
 function displayEvents() {
-fetch('http://localhost:5000/getEventList').then(data => data.json()).then(data => {
+fetch('https://event-mang-tcs.herokuapp.com/getEventList').then(data => data.json()).then(data => {
     arrays = data
     var x = document.getElementById('eventList')
 

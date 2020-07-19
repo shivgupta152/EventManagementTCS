@@ -4,7 +4,7 @@ showCustomerProfile()
 showCustomerEnquiry()
 //Func1 EventInfo
 function displayEvents(){
-     fetch('http://localhost:5000/getBookedEventsList').then(data => data.json()).then(data => {
+     fetch('https://event-mang-tcs.herokuapp.com/getBookedEventsList').then(data => data.json()).then(data => {
          arrays = data
          var x = document.getElementById('BookedEventList')
 
@@ -35,7 +35,7 @@ function displayEvents(){
 
  //Func2 EventMangerProfile
 function showCustomerProfile() {
-    fetch('http://localhost:5000/CustomerProfileInfo').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/CustomerProfileInfo').then(data => data.json()).then(data => {
         arrays = data
         console.log(arrays)
         document.getElementById('fName').value = arrays[0].FirstName
@@ -52,7 +52,7 @@ function showCustomerProfile() {
 }
 //Func3 Enq from Customer
 function showCustomerEnquiry() {
-    fetch('http://localhost:5000/getFullEnqList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getFullEnqList').then(data => data.json()).then(data => {
         arrays = data
 
         var x = document.getElementById('prvEnq')

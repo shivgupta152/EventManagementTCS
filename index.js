@@ -1,7 +1,7 @@
 showCarousel()
 //showCarouselData
 function showCarousel() {
-    fetch('http://localhost:5000/getCarouselImages').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getCarouselImages').then(data => data.json()).then(data => {
         arrays = data
 
         var x = document.getElementById('carousel-indicator')

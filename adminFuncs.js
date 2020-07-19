@@ -10,7 +10,7 @@ showCustomerProfile()
 //display EM's
 function showEM() {
 
-    fetch('http://localhost:5000/getEventManagerList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getEventManagerList').then(data => data.json()).then(data => {
         arrays = data
         var x = document.getElementById('EMBody')
 
@@ -45,7 +45,7 @@ function showEM() {
 
 //diplay BookedEvents
 function displayBookedEvents(){
-    fetch('http://localhost:5000/getBookedEventsAdmin').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getBookedEventsAdmin').then(data => data.json()).then(data => {
         arrays = data
         var x = document.getElementById('BookedEventList')
 
@@ -84,7 +84,7 @@ function displayBookedEvents(){
 
 //
 function displayEvents() {
-    fetch('http://localhost:5000/getEventList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getEventList').then(data => data.json()).then(data => {
         arrays = data
         var x = document.getElementById('EventList')
 
@@ -141,7 +141,7 @@ function onUpdateEM() {
 }
 
 function showCustomerProfile() {
-    fetch('http://localhost:5000/CustomerProfileInfo').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/CustomerProfileInfo').then(data => data.json()).then(data => {
         arrays = data
         console.log(arrays)
         document.getElementById('fNameAdmin').value = arrays[0].FirstName
@@ -173,7 +173,7 @@ function onshowEventUpdDiv(){
 
 //showCarouselData
 function showCarousel() {
-    fetch('http://localhost:5000/getCarouselImages').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getCarouselImages').then(data => data.json()).then(data => {
         arrays = data
 
         if(arrays.length === 0) {
@@ -218,7 +218,7 @@ function showCarousel() {
 //Func3 Enq from Customer
 //Func3 Enq from Customer
 function showCustomerEnquiry() {
-    fetch('http://localhost:5000/getFullEnqList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getFullEnqList').then(data => data.json()).then(data => {
         arrays = data
 
         var x = document.getElementById('prvEnq')

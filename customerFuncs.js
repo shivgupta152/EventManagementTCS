@@ -7,7 +7,7 @@ displayCustomerEvents()
 displayCustomerEnquiry()
 //func1 EventDisplay
 function displayCustomerEvents() {
-    fetch('http://localhost:5000/getBookedEvents').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getBookedEvents').then(data => data.json()).then(data => {
         arrays = data
 
     var x = document.getElementById('DisplayEvents')
@@ -36,7 +36,7 @@ function displayCustomerEvents() {
 
 //Display Events Option
 function EventsInForm() {
-    fetch('http://localhost:5000/getEventList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getEventList').then(data => data.json()).then(data => {
         arrays = data
 
         var x = document.getElementById('EventName')
@@ -58,7 +58,7 @@ function EventsInForm() {
 
 //Display EventManagerOptions
 function EventManageInForm() {
-    fetch('http://localhost:5000/getEventManagerList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getEventManagerList').then(data => data.json()).then(data => {
         arrays = data
         var x = document.getElementById('EventManager')
         for(var i = 0;i<arrays.length;++i){
@@ -73,7 +73,7 @@ function EventManageInForm() {
 
 //Func2 Profile
 function showCustomerProfile() {
-    fetch('http://localhost:5000/CustomerProfileInfo').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/CustomerProfileInfo').then(data => data.json()).then(data => {
         arrays = data
         console.log(arrays)
         document.getElementById('fName').value = arrays[0].FirstName
@@ -91,7 +91,7 @@ function showCustomerProfile() {
 
 //Func3 EnquiryDisplay
 function displayCustomerEnquiry() {
-    fetch('http://localhost:5000/getEnqList').then(data => data.json()).then(data => {
+    fetch('https://event-mang-tcs.herokuapp.com/getEnqList').then(data => data.json()).then(data => {
         arrays = data
 
         var x = document.getElementById('prvEnq')
